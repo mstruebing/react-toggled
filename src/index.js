@@ -83,7 +83,7 @@ class Toggle extends Component {
   setOff = this.setOnState.bind(this, false)
   toggle = this.setOnState.bind(this, undefined)
 
-  componentWillReceiveProps({on}) {
+  UNSAFE_componentWillReceiveProps({on}) {
     if (on !== this.props.on && on !== this.state.on) {
       this.setOnState(on)
     }
